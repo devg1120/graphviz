@@ -1,0 +1,95 @@
+graph ni {
+	label="Complex Architecture" labelloc=t nodesep=0.8 splines=true
+	edge [dir=both]
+	rankdir=TB
+	layout=fdp
+	subgraph cluster_clients_mobvm_a {
+		label="xvm_a Clients"
+		style=dashed
+		rank=same
+		mobvm_a_req [label="xvm_a Application .." shape=Mrecord]
+		mobvm_a_req1 [label="xvm_a Application 1" shape=Mrecord]
+	}
+	subgraph cluster_clients_prot_a {
+		label="Z Clients"
+		style=dashed
+		rank=same
+		z_req [label="Z Application .." shape=Mrecord]
+		z_req1 [label="Z Application 1" shape=Mrecord]
+	}
+	z_req1 -- z_shapeshifter [constraint=true dir=both headlabel=H100 taillabel=T100]
+	z_req -- z_shapeshifter [constraint=true dir=both]
+	subgraph cluster_prot_asrv {
+		label="Z Shapeshifters
+(Configurable
+Z Shapeshifter"
+		style=dashed
+		z_shapeshifter [label="Z Shapeshifter Appearances" shape=Mrecord]
+	}
+	z_shapeshifter -- machsrv_xprot_gen:f0 [constraint=true dir=both]
+	mobvm_a_req1 -- machsrv_xprot_gen:f0 [constraint=true dir=both]
+	mobvm_a_req -- machsrv_xprot_gen:f0 [constraint=true dir=both]
+	subgraph cluster_machsrv {
+		label="Machsrv Shapeshifter"
+		machsrv_xprot_gen [label="<f0>Machsrv Core|<f1>PROT_A-to-XPROT Converter" shape=Mrecord]
+	}
+	tunnel_ingress -- accel [dir=both]
+	accel -- tunnel_egress [dir=both]
+	accel_appearance -- accel [constraint=true dir=both]
+	arbiter_vadam -- other_xprot [style=dotted]
+	arbiter_vadam -- front_end_jz [style=dotted]
+	arbiter_vadam -- others [style=dotted]
+	front_end_jz -- tunnel_ingress [label="XPROT over PROT_G" dir=both]
+	front_end_jz -- other_xprot [dir=both]
+	other_xprot -- machsrv_xprot_gen [label="XPROT over PROT_G" constraint=tru dir=both]
+	subgraph cluster_yours_trulybox {
+		label=YoursTruly
+		subgraph cluster_tunnel {
+			label="Foo Reactor"
+			tunnel_ingress [label="Ingress Shapeshifter" shape=Mrecord]
+			accel [label="NOX Shapeshifter" shape=Mrecord]
+			tunnel_egress [label="Egress Shapeshifter" shape=Mrecord]
+		}
+		subgraph cluster_frontend {
+			label="YoursTruly Front-End"
+			others [label="Other Chunks" shape=Mrecord]
+			other_xprot [label="XPROT \"crystalizer\"" shape=Mrecord]
+			front_end_jz [label="JZ Chunk" shape=Mrecord]
+			arbiter_vadam [label="Arbiter Chunks" shape=Mrecord]
+		}
+	}
+	others -- handle_1 [constraint=true dir=both style=dotted]
+	others -- handle_x [constraint=true dir=both style=dotted]
+	subgraph cluster_shapeshifter_misc {
+		label="Other Shapeshifters"
+		style=dashed
+		handle_x [label="Shapeshift X" shape=Mrecord]
+		handle_1 [label="Shapeshift 1" shape=Mrecord]
+	}
+	subgraph cluster_accel {
+		label="GS NOXd Shapeshifter"
+		accel_appearance [label="NOXd Appearance" shape=Mrecord]
+	}
+	foo_agent -- zzz_worker [label=MechCmd constraint=true dir=both]
+	foo_agent -- yyy_worker [label=MechCmd constraint=true dir=both]
+	zzz_worker -- zzz [label="SCADA_A()" constraint=true dir=both]
+	yyy_worker -- yyy [label="SCADA_A()" constraint=true dir=both]
+	tunnel_egress -- foo_agent [label="Raw PROT_G" constraint=true dir=both]
+	subgraph cluster_space_ship_a {
+		label=ShipX
+		subgraph cluster_vm_a {
+			label=ReactorX
+			subgraph cluster_tungsten {
+				label=Tungsten
+				zzz [label=ZZZ shape=Mrecord]
+				yyy [label=YYY shape=Mrecord]
+			}
+		}
+		subgraph cluster_piston {
+			label=ReactorY
+			zzz_worker [label="ZZZ Worker" shape=Mrecord]
+			yyy_worker [label="YYY Worker" shape=Mrecord]
+			foo_agent [label="Foo Agent" shape=Mrecord]
+		}
+	}
+}
