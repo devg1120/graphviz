@@ -26,8 +26,8 @@
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_0</title>
-<polygon fill="#ababab" stroke="black" points="36.25,-72.47 36.25,-236.47 173.25,-236.47 173.25,-72.47 36.25,-72.47"/>
-<text text-anchor="middle" x="59.63" y="-215.37" font-family="Times New Roman,serif" font-size="18.00" fill="white">clu0</text>
+<polygon fill="#ababab" stroke="black" points="36.28,-72.54 36.28,-236.54 173.28,-236.54 173.28,-72.54 36.28,-72.54"/>
+<text text-anchor="middle" x="59.65" y="-215.44" font-family="Times New Roman,serif" font-size="18.00" fill="white">clu0</text>
 </g>
 <g id="clust5" class="cluster">
 <title>cluster_1</title>
@@ -36,8 +36,8 @@
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_2</title>
-<polygon fill="#888888" stroke="black" points="184.7,-107.4 184.7,-216.4 265.7,-216.4 265.7,-107.4 184.7,-107.4"/>
-<text text-anchor="middle" x="208.08" y="-195.3" font-family="Times New Roman,serif" font-size="18.00" fill="white">clu2</text>
+<polygon fill="#888888" stroke="black" points="184.69,-106.95 184.69,-216.95 265.69,-216.95 265.69,-106.95 184.69,-106.95"/>
+<text text-anchor="middle" x="208.06" y="-195.85" font-family="Times New Roman,serif" font-size="18.00" fill="white">clu2</text>
 </g>
 <g id="clust7" class="cluster">
 <title>cluster_3</title>
@@ -96,41 +96,41 @@
 <!-- alpha -->
 <g id="node5" class="node">
 <title>alpha</title>
-<polygon fill="red" stroke="red" points="90.06,-157.65 36.06,-157.65 36.06,-121.65 90.06,-121.65 90.06,-157.65"/>
-<text text-anchor="middle" x="63.06" y="-134.23" font-family="Times New Roman,serif" font-size="14.00">alpha</text>
+<polygon fill="red" stroke="red" points="90.09,-157.72 36.09,-157.72 36.09,-121.72 90.09,-121.72 90.09,-157.72"/>
+<text text-anchor="middle" x="63.09" y="-134.29" font-family="Times New Roman,serif" font-size="14.00">alpha</text>
 </g>
 <!-- beta -->
 <g id="node6" class="node">
 <title>beta</title>
-<polygon fill="red" stroke="red" points="129.29,-208.72 75.29,-208.72 75.29,-172.72 129.29,-172.72 129.29,-208.72"/>
-<text text-anchor="middle" x="102.29" y="-185.29" font-family="Times New Roman,serif" font-size="14.00">beta</text>
+<polygon fill="red" stroke="red" points="118.01,-108.86 64.01,-108.86 64.01,-72.86 118.01,-72.86 118.01,-108.86"/>
+<text text-anchor="middle" x="91.01" y="-85.43" font-family="Times New Roman,serif" font-size="14.00">beta</text>
 </g>
 <!-- alpha&#45;&#45;beta -->
 <g id="edge2" class="edge">
 <title>alpha&#45;&#45;beta</title>
-<path fill="none" stroke="white" d="M77.22,-158.09C80.82,-162.77 84.69,-167.8 88.28,-172.48"/>
+<path fill="none" stroke="white" d="M73.64,-121.25C75.87,-117.35 78.21,-113.25 80.44,-109.36"/>
 </g>
 <!-- gamma -->
 <g id="node7" class="node">
 <title>gamma</title>
-<polygon fill="red" stroke="red" points="173.29,-153.07 117.54,-153.07 117.54,-117.07 173.29,-117.07 173.29,-153.07"/>
-<text text-anchor="middle" x="145.41" y="-129.65" font-family="Times New Roman,serif" font-size="14.00">gamma</text>
+<polygon fill="red" stroke="red" points="173.31,-153.14 117.56,-153.14 117.56,-117.14 173.31,-117.14 173.31,-153.14"/>
+<text text-anchor="middle" x="145.44" y="-129.72" font-family="Times New Roman,serif" font-size="14.00">gamma</text>
 </g>
 <!-- alpha&#45;&#45;gamma -->
 <g id="edge3" class="edge">
 <title>alpha&#45;&#45;gamma</title>
-<path fill="none" stroke="white" d="M90.48,-138.13C99.09,-137.65 108.61,-137.12 117.27,-136.64"/>
+<path fill="none" stroke="white" d="M90.51,-138.19C99.12,-137.72 108.63,-137.19 117.29,-136.71"/>
 </g>
 <!-- eta -->
 <g id="node8" class="node">
 <title>eta</title>
-<polygon fill="red" stroke="red" points="117.98,-108.79 63.98,-108.79 63.98,-72.79 117.98,-72.79 117.98,-108.79"/>
-<text text-anchor="middle" x="90.98" y="-85.37" font-family="Times New Roman,serif" font-size="14.00">eta</text>
+<polygon fill="red" stroke="red" points="129.32,-208.79 75.32,-208.79 75.32,-172.79 129.32,-172.79 129.32,-208.79"/>
+<text text-anchor="middle" x="102.32" y="-185.36" font-family="Times New Roman,serif" font-size="14.00">eta</text>
 </g>
 <!-- alpha&#45;&#45;eta -->
 <g id="edge4" class="edge">
 <title>alpha&#45;&#45;eta</title>
-<path fill="none" stroke="white" d="M73.62,-121.18C75.84,-117.29 78.19,-113.18 80.41,-109.29"/>
+<path fill="none" stroke="white" d="M77.25,-158.15C80.85,-162.84 84.72,-167.87 88.31,-172.55"/>
 </g>
 <!-- delta -->
 <g id="node9" class="node">
@@ -141,34 +141,34 @@
 <!-- alpha&#45;&#45;delta -->
 <g id="edge11" class="edge">
 <title>alpha&#45;&#45;delta</title>
-<path fill="none" stroke="white" d="M62.09,-157.96C60.51,-187.65 57.41,-245.99 55.84,-275.67"/>
+<path fill="none" stroke="white" d="M62.11,-158.02C60.53,-187.7 57.42,-246.01 55.84,-275.68"/>
 </g>
 <!-- lambda -->
 <g id="node13" class="node">
 <title>lambda</title>
-<polygon fill="red" stroke="red" points="265.87,-163.04 265.87,-177.95 242.03,-188.5 208.33,-188.5 184.49,-177.95 184.49,-163.04 208.33,-152.5 242.03,-152.5 265.87,-163.04"/>
-<text text-anchor="middle" x="225.18" y="-165.07" font-family="Times New Roman,serif" font-size="14.00">lambda</text>
+<polygon fill="red" stroke="red" points="265.92,-117.5 265.92,-132.41 242.09,-142.95 208.38,-142.95 184.55,-132.41 184.55,-117.5 208.38,-106.95 242.09,-106.95 265.92,-117.5"/>
+<text text-anchor="middle" x="225.24" y="-119.53" font-family="Times New Roman,serif" font-size="14.00">lambda</text>
 </g>
 <!-- beta&#45;&#45;lambda -->
 <g id="edge12" class="edge">
 <title>beta&#45;&#45;lambda</title>
-<path fill="none" stroke="white" d="M129.57,-186.23C145.69,-183.58 166.41,-180.17 184.44,-177.2"/>
+<path fill="none" stroke="white" d="M118.5,-97.84C138.59,-102.94 166.07,-109.92 188.12,-115.52"/>
 </g>
 <!-- gamma&#45;&#45;lambda -->
 <g id="edge13" class="edge">
 <title>gamma&#45;&#45;lambda</title>
-<path fill="none" stroke="white" d="M173.76,-147.66C181.02,-150.88 188.83,-154.35 196.12,-157.59"/>
+<path fill="none" stroke="white" d="M173.8,-131.52C177.2,-131.09 180.73,-130.64 184.27,-130.18"/>
 </g>
 <!-- mu -->
 <g id="node14" class="node">
 <title>mu</title>
-<polygon fill="red" stroke="red" points="245.86,-117.54 245.86,-132.45 230.04,-142.99 207.68,-142.99 191.86,-132.45 191.86,-117.54 207.68,-106.99 230.04,-106.99 245.86,-117.54"/>
-<text text-anchor="middle" x="218.86" y="-119.57" font-family="Times New Roman,serif" font-size="14.00">mu</text>
+<polygon fill="red" stroke="red" points="252.28,-163.44 252.28,-178.35 236.46,-188.9 214.09,-188.9 198.28,-178.35 198.28,-163.44 214.09,-152.9 236.46,-152.9 252.28,-163.44"/>
+<text text-anchor="middle" x="225.28" y="-165.47" font-family="Times New Roman,serif" font-size="14.00">mu</text>
 </g>
 <!-- eta&#45;&#45;mu -->
 <g id="edge15" class="edge">
 <title>eta&#45;&#45;mu</title>
-<path fill="none" stroke="white" d="M118.42,-98.13C139.99,-103.9 169.91,-111.9 191.47,-117.67"/>
+<path fill="none" stroke="white" d="M129.61,-186.37C149.98,-183.08 177.71,-178.59 198.07,-175.3"/>
 </g>
 <!-- epsilon -->
 <g id="node10" class="node">
@@ -185,7 +185,7 @@
 <g id="node11" class="node">
 <title>zeta</title>
 <polygon fill="red" stroke="red" points="150.67,-285.49 96.67,-285.49 96.67,-249.49 150.67,-249.49 150.67,-285.49"/>
-<text text-anchor="middle" x="123.67" y="-262.06" font-family="Times New Roman,serif" font-size="14.00">zeta</text>
+<text text-anchor="middle" x="123.67" y="-262.07" font-family="Times New Roman,serif" font-size="14.00">zeta</text>
 </g>
 <!-- delta&#45;&#45;zeta -->
 <g id="edge6" class="edge">
@@ -201,7 +201,7 @@
 <!-- delta&#45;&#45;theta -->
 <g id="edge7" class="edge">
 <title>delta&#45;&#45;theta</title>
-<path fill="none" stroke="white" d="M45.2,-312.2C42.52,-317.26 39.61,-322.75 36.93,-327.81"/>
+<path fill="none" stroke="white" d="M45.2,-312.21C42.52,-317.26 39.61,-322.75 36.93,-327.81"/>
 </g>
 <!-- nu -->
 <g id="node15" class="node">
@@ -217,13 +217,13 @@
 <!-- lambda&#45;&#45;mu -->
 <g id="edge8" class="edge">
 <title>lambda&#45;&#45;mu</title>
-<path fill="none" stroke="white" d="M222.65,-152.25C222.23,-149.28 221.81,-146.21 221.39,-143.24"/>
+<path fill="none" stroke="white" d="M225.25,-143.38C225.26,-146.37 225.26,-149.47 225.26,-152.47"/>
 </g>
 <!-- xi -->
 <g id="node16" class="node">
 <title>xi</title>
 <polygon fill="red" stroke="red" points="280.99,-351.02 249.45,-351.02 238.22,-315.02 292.22,-315.02 280.99,-351.02"/>
-<text text-anchor="middle" x="265.22" y="-327.59" font-family="Times New Roman,serif" font-size="14.00">xi</text>
+<text text-anchor="middle" x="265.22" y="-327.6" font-family="Times New Roman,serif" font-size="14.00">xi</text>
 </g>
 <!-- nu&#45;&#45;xi -->
 <g id="edge9" class="edge">

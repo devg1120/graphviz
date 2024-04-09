@@ -1,5 +1,5 @@
 graph network {
-	edge [len=2.0]
+	edge [len=3.0]
 	"172.21.100.0/30" [label="172.21.100.0/30
 LOCAL" shape=ellipse]
 	"10.0.0.0/24" [label="10.0.0.0/24
@@ -7,19 +7,15 @@ DMZ" shape=ellipse]
 	"192.168.0.0/24" [label="192.168.0.0/24
 LAN" shape=ellipse]
 	r1 [label="r1
-core router " shape=box]
-	r2 [label="r2
-Internet gateway " shape=box]
+core router" pos="10,10" shape=box]
 	zeus [label="zeus
-NFS content server " shape=box]
+NFS content server" pos="10,10" shape=box]
 	mx [label="mx
-mail and news server " shape=box]
-	web1 [label=web1 shape=box]
-	web2 [label=web2 shape=box]
+mail and news server" pos="10,10" shape=box]
 	backend [label="backend
-SQL server " shape=box]
+SQL server" pos="10,10" shape=box]
 	fshare [label="fshare
-fileserver " shape=box]
+fileserver" pos="10,10" shape=box]
 	ws1 [label=ws1 shape=box]
 	ws2 [label=ws2 shape=box]
 	ws3 [label=ws3 shape=box]
@@ -28,6 +24,7 @@ fileserver " shape=box]
 	r1 -- "192.168.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.1]
 	r1 -- "172.21.100.0/30" [labeldistance=2.3 labelfloat=false taillabel=.1]
 	r2 -- "172.21.100.0/30" [labeldistance=2.3 labelfloat=false taillabel=.2]
+	r3 -- "172.21.100.0/30" [labeldistance=2.3 labelfloat=false taillabel=.3]
 	zeus -- "10.0.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.2]
 	mx -- "10.0.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.3]
 	web1 -- "10.0.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.4]
@@ -38,4 +35,20 @@ fileserver " shape=box]
 	ws2 -- "192.168.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.22]
 	ws3 -- "192.168.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.23]
 	ws4 -- "192.168.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.24]
+	subgraph cluster_kbc {
+		label=kbc
+		labelloc=t
+		labeljust=c
+		r2 [label="r2
+Internet gateway" shape=box]
+		r3 [label="r3
+Internet gateway" shape=box]
+	}
+	subgraph cluster_osb {
+		label=osb
+		labelloc=t
+		labeljust=c
+		web1 [label=web1 shape=box]
+		web2 [label=web2 shape=box]
+	}
 }
