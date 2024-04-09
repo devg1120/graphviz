@@ -1,0 +1,31 @@
+# routers
+
+host r1 ip 10.0.0.1/24
+host r1 label core router
+host r1 ip 192.168.0.1/24
+host r1 ip 172.21.100.1/30
+host r2 ip 172.21.100.2/30
+host r2 label Internet gateway
+net 172.21.100.0/30  LOCAL
+
+# DMZ nodes
+
+host zeus ip 10.0.0.2/24
+host zeus label NFS content server
+host mx ip 10.0.0.3/24
+host mx label mail and news server
+host web1 ip 10.0.0.4/24
+host web2 ip 10.0.0.5/24
+host backend ip 10.0.0.6/24
+host backend label SQL server
+net 10.0.0.0/24 DMZ
+
+# LAN nodes
+
+host fshare ip 192.168.0.4/24
+host fshare label fileserver
+host ws1 ip 192.168.0.21/24
+host ws2 ip 192.168.0.22/24
+host ws3 ip 192.168.0.23/24
+host ws4 ip 192.168.0.24/24
+net     192.168.0.0/24 LAN

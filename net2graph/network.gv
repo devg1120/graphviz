@@ -1,0 +1,41 @@
+graph network {
+	edge [len=2.0]
+	"172.21.100.0/30" [label="172.21.100.0/30
+LOCAL" shape=ellipse]
+	"10.0.0.0/24" [label="10.0.0.0/24
+DMZ" shape=ellipse]
+	"192.168.0.0/24" [label="192.168.0.0/24
+LAN" shape=ellipse]
+	r1 [label="r1
+core router " shape=box]
+	r2 [label="r2
+Internet gateway " shape=box]
+	zeus [label="zeus
+NFS content server " shape=box]
+	mx [label="mx
+mail and news server " shape=box]
+	web1 [label=web1 shape=box]
+	web2 [label=web2 shape=box]
+	backend [label="backend
+SQL server " shape=box]
+	fshare [label="fshare
+fileserver " shape=box]
+	ws1 [label=ws1 shape=box]
+	ws2 [label=ws2 shape=box]
+	ws3 [label=ws3 shape=box]
+	ws4 [label=ws4 shape=box]
+	r1 -- "10.0.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.1]
+	r1 -- "192.168.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.1]
+	r1 -- "172.21.100.0/30" [labeldistance=2.3 labelfloat=false taillabel=.1]
+	r2 -- "172.21.100.0/30" [labeldistance=2.3 labelfloat=false taillabel=.2]
+	zeus -- "10.0.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.2]
+	mx -- "10.0.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.3]
+	web1 -- "10.0.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.4]
+	web2 -- "10.0.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.5]
+	backend -- "10.0.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.6]
+	fshare -- "192.168.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.4]
+	ws1 -- "192.168.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.21]
+	ws2 -- "192.168.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.22]
+	ws3 -- "192.168.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.23]
+	ws4 -- "192.168.0.0/24" [labeldistance=2.3 labelfloat=false taillabel=.24]
+}
