@@ -110,7 +110,7 @@ print("--------------------------------")
 G = graphviz.Graph('network',  format='svg')
 
 #G.engine = "fdp"
-#G.engine = "circo"
+#G.engine = "circo"  // un support cluster
 #G.engine = "twopi"
 G.engine = "neato"
 

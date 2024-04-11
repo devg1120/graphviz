@@ -1,0 +1,123 @@
+graph g {
+ 
+bgcolor="#ffffff00"
+overlap=false
+ 
+layout=fdp
+//layout=neato
+
+//dim = 5
+//dimen = 6
+//K = 1.0
+//maxiter = 50
+normalize = true
+splines="ortho"
+//splines="polyline"
+//splines="spline"
+//splines="curved"
+
+
+
+//start=2
+edge [penwidth=0.75,arrowsize=0.6]
+edge [color=black, fontsize=8, forcelabels=true]
+ 
+node [shape=circle,
+      fixedsize=true,
+      width=0.25,
+      color="black",
+      fillcolor="white",
+      style="filled,solid",
+      fontsize=12];
+ 
+ /*
+node1 [label="s₁"] # u+2081 (yes, it can do unicode!)
+node2 [label="s₂"]
+node3 [label="s₃"]
+node4 [label="t₁",pos="0,0"]
+node5 [label="t₂",pos="0,1"]
+node6 [label="t₃",pos="1,1"]
+node7 [label="t₄",pos="1,0"]
+ */
+//subgraph clusterG0 {
+//    label="G∪T" # union u+222a
+ 
+ 
+    subgraph clusterG1 {
+            label="G"
+            //bgcolor=white
+            subgraph clusterG11 {
+             label="g1"
+	     cluster="true"
+             node1 [label="s₁"] # u+2081 (yes, it can do unicode!)
+             node2 [label="s₂"]
+	    }
+            subgraph clusterG12 {
+             label="g2"
+	     cluster="true"
+             node3 [label="s₃"]
+             node100 [label="s₃"]
+             node3--node100
+	    }
+            node1--node2
+            node2--node3
+            node3--node1
+    }
+ 
+ 
+    subgraph clusterG2 {
+            label="H"
+            bgcolor=white
+            node4 [label="t₁"]
+            node5 [label="t₂"]
+            node6 [label="t₃"]
+            node7 [label="t₄"]
+            node4--node5
+            node5--node6
+            node6--node4
+            node6--node7
+    }
+    subgraph clusterG3 {
+            label="T"
+            bgcolor=white
+            node8 [label="t₁"]
+            node9 [label="t₂"]
+            node10 [label="t₃"]
+            node11 [label="t₄"]
+            node8--node9
+            node9--node10
+            node10--node8
+            node10--node11
+    }
+    subgraph clusterG4 {
+            label="S"
+            bgcolor=white
+            node12 [label="t₁"]
+            node13 [label="t₂"]
+            node14 [label="t₃"]
+            node15 [label="t₄"]
+            node12--node13
+            node13--node14
+            node14--node15
+            node15--node12
+    }
+    subgraph clusterG5 {
+            label="U"
+            bgcolor=white
+            node16 [label="t₁"]
+            node17 [label="t₂"]
+            node18 [label="t₃"]
+            node19 [label="t₄"]
+            node20 [label="t₄"]
+            node16--node17
+            node16--node18
+            node16--node19
+            node16--node20
+    }
+    node3--node6[style=dashed,penwidth=1]
+    node9--node12[style=dashed,penwidth=1]
+    node3--node8[style=dashed,penwidth=1]
+    node9--node16[style=dashed,penwidth=1]
+//}
+ 
+}

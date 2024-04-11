@@ -76,6 +76,7 @@ def edge_attr(name, label):    # subgraph
 def sub_graph(name, label):    # subgraph 
     #c = graphviz.Graph(name=name) 
     p = graphviz.Graph(name ) 
+    #p.attr(layout="fdp")
     p.attr(label=label)
     p.attr(labelloc="t")
     p.attr(labeljust="c")
@@ -189,7 +190,8 @@ def g(g):    # subgraph
     #g.attr(rankdir="TB")
     #g.attr(layout="dot")
     g.attr(layout="fdp")
-
+    #g.attr(layout="neato")
+    #g.attr(overlap = "false")
 
     config = {
               #"name"  : "cluster_6",

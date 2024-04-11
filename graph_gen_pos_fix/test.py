@@ -17,7 +17,7 @@ from graphviz import Digraph
 ###  0.0  1.0  2.0  3.0
 ###
 
-gv = Digraph(engine='neato', format='svg')
+gv = Digraph(engine='neato', format='svg'  )
 # フォント設定
 gv.attr('node', fontname="MS Gothic")
 # ノード作成

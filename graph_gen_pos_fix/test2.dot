@@ -1,0 +1,123 @@
+//digraph z {
+graph z {
+
+/*
+circo	円形のグラフ.
+dot	階層型のグラフ. 有向グラフ向き. デフォルトのレイアウトエンジン
+fdp	スプリング(ばね)モデルのグラフ. 無向グラフ向き.
+neato	スプリング(ばね)モデルのグラフ. 無向グラフ向き.
+osage	配列型のグラフ.
+sfdp	fdpのマルチスケール版. 大きな無向グラフ向き.
+twopi	放射型のグラフ. ノードは同心円状に配置さ
+*/
+
+graph [
+ //layout = neato
+ //layout = dot
+ layout = fdp
+ //layout = twopi
+ //layout = circo
+ //layout = osage
+
+ //nodesep = 10 // 0.25  dot only
+ //sep = "15"
+ //esep = "+5"
+ //voro_margin = 0.1
+ //levelsgap = "3"
+
+ mode = "major"  // OK
+ //mode = "KK"
+ //mode = "sgd"     // OK
+ //mode = "hier"  // OK
+ //mode = "ipsep" // OK
+
+ //model = "shortpath"
+ //model = "circuit"
+ model = "subset"
+
+ overlap = false
+ normalize = false
+ //notranslate=true
+ pad=1.0
+ nodesep=1.75  // inches
+ //esep="+10"
+ //sep="+10"
+ dim=4
+ dimen=4
+
+ label = "GREPH-TEST-GS"
+ ];
+
+ node [ 
+    shape = box
+    //margin = 0.3   // node outer space
+    //margin="0.5,0.2"
+    style = "solid,filled",
+    fillcolor = white    //  shpe face
+    color = green        // shpe line
+    //fontcolor = white
+    fontcolor = blue
+    fontsize = 18
+    K = 0.7
+    //pad=0.1
+    //peripheries = 3
+    //pin = true
+ ];
+ edge [ 
+    len = 5
+    constraint=false
+ ];
+  a  [xlabel = "XA", xlp="10,10"]
+  b 
+  c 
+  
+  /*
+  subgraph clusterX_margin {
+
+     style=invis
+    // margin=20.0
+    label="sub margin"
+    style = "solid,filled"
+    fillcolor = "gray"    //  shpe face
+*/
+
+  subgraph clusterX_pad {
+  graph[
+    id = "0001PAD"
+    label="sub"
+    //style = "solid,filled"
+    //fillcolor = "gray"    //  shpe face
+    margin = 20
+    //margin="0.5,0.2"
+    penwidth ="15"
+    pencolor = yellow
+   ];
+   x
+   y
+   z
+  subgraph clusterX {
+  graph[
+    id = "0001"
+    label="sub"
+    style = "solid,filled"
+    fillcolor = "white"    //  shpe face
+    margin = 20
+    //margin="0.5,0.2"
+    penwidth ="5"
+    pencolor = red
+   ];
+    d 
+    e 
+    g
+    d--e--g--d
+  }
+  }
+//  }
+  f 
+
+  a--c   [label="AC" ]
+  b--f
+  d--f
+  c--d
+  a--b
+}

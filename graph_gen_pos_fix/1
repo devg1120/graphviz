@@ -1,0 +1,76 @@
+digraph z {
+  // build by hand
+  // use "neato -n -T..."  see http://www.graphviz.org/faq/#FaqDotWithNodeCoords
+  // remember, all coordinates are in points (72/inch)
+/*
+  a [pos="0,0!"]
+  b [pos="3,0!"]
+  c [pos="3,2!"]
+  d [pos="0,2!"]
+  */
+/*
+  //layout = "neato"
+  //layout = "dot"
+  a [pos="100,100"]
+  b [pos="200,100"]
+  c [pos="200,200"]
+  
+  
+  subgraph clusterX {
+    label="sub"
+    graph [bb="50,350,480,580" ]
+    d [pos="100,500"]
+    e [pos="400,400"]
+  }
+  f [pos="100,200"]
+
+  a->c
+  b->f
+  d->f
+  */
+
+/*
+circo	円形のグラフ.
+dot	階層型のグラフ. 有向グラフ向き. デフォルトのレイアウトエンジン
+fdp	スプリング(ばね)モデルのグラフ. 無向グラフ向き.
+neato	スプリング(ばね)モデルのグラフ. 無向グラフ向き.
+osage	配列型のグラフ.
+sfdp	fdpのマルチスケール版. 大きな無向グラフ向き.
+twopi	放射型のグラフ. ノードは同心円状に配置さ
+*/
+
+graph [
+ layout = neato
+ //layout = dot
+     //rankdir = TB
+ //layout = fdp
+ //layout = twopi
+ //layout = circo
+ ];
+
+ node [ 
+    shape = box
+ ];
+ edge [ 
+    len = 6.0
+ ];
+  a 
+  b 
+  c 
+  
+  
+  subgraph clusterX {
+    label="sub"
+    d 
+    e 
+    g
+    d->e->g->d
+  }
+  f 
+
+  a->c
+  b->f
+  d->f
+  c->d
+  a->b
+}
